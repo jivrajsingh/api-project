@@ -1,0 +1,21 @@
+<my>
+  <sample>
+    <reqwithbody1>
+       <endPoint>/myservice-endpoint</endPoint>
+       <headers>{'Content-Type': 'application/xml'}
+      </headers>
+      <body>file:resources/data/reqbody.xml</body>
+    </reqwithbody1>
+    <!-- using CDATA to provide inline xml body-->
+    <reqwithbody2>
+       <endPoint>/myservice-endpoint</endPoint>
+       <headers>{'Content-Type': 'application/xml'}</headers>
+      <body>
+          <![CDATA[
+            <message> here is xml body!... </message>
+          ]]>
+      </body>
+    </reqwithbody2>
+
+  </sample>
+</my>

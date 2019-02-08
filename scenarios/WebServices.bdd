@@ -1,0 +1,29 @@
+SCENARIO: QEO 4867_Apply Leave
+META-DATA: {"description": "Get leave reasons using webservice","groups": ["ORCHESTRATED"]}
+	When user send request '/get-leave-reasons'
+	Then response should contain '${leave.response}'
+END
+
+SCENARIO: QEO 4868_Visa Request
+META-DATA: {"description": "Get supervisors name using webservice","groups": ["ORCHESTRATED"]}
+	When user send request '/get-Supervisors-Name'
+	Then response should contain '${visa.response}'
+END
+
+SCENARIO: QEO 4869_Leave Manager
+META-DATA: {"description": "Get location holidays list using webservice","groups": ["ORCHESTRATED"]}
+	When user send request '/get-location-wise-holiday-list'
+	Then response should contain '${holiday.response}'
+END
+
+SCENARIO: QEO 4870_ESS MyProfile
+META-DATA: {"description": "Get contact details using webservice","groups": ["ORCHESTRATED"]}
+	When user send request '/get-contact-details'
+	Then response should contain '${contact.response}'
+END
+
+SCENARIO: QEO 4871_My Travel Request
+META-DATA: {"description": "Get travel locations using webservice","groups": ["ORCHESTRATED"]}
+	When user send request '/get-travel-locations'
+	Then response should contain '${location.response}'
+END
